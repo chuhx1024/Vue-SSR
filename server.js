@@ -19,14 +19,12 @@ const server = express()
 server.use('/dist', express.static('./dist'))
 
 server.get('/', (req, res) => {
-    console.log(1)
     renderer.renderToString({
         title: 'Vue SSR',
         meta: `
             <meta name="description" content="Vue SSR">
         `,
     }, (err, html) => {
-        console.log(html, 90)
         if (err) {
             return res.status(500).end('Internal Server Error.')
         }
