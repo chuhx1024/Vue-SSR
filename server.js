@@ -8,7 +8,7 @@ const server = express()
 // 生成一个渲染器
 const renderer = VueServerRenderer.createRenderer({
     // 渲染器就会自动把渲染的结果注入到模板中
-    template: fs.readFileSync('./index.html', 'utf-8'),
+    template: fs.readFileSync('./index.template.html', 'utf-8'),
 })
 const createApp = () => {
     const app = new Vue({
