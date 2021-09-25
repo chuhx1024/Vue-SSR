@@ -14,7 +14,8 @@ module.exports = merge(baseConfig, {
     target: 'node',
     output: {
         filename: 'server-bundle.js',
-        // 此处告知 server bundle 使用 Node 风格导出模块(Node-style exports) libraryTarget: 'commonjs2'
+        // 此处告知 server bundle 使用 Node 风格导出模块(Node-style exports)
+        libraryTarget: 'commonjs2',
     },
     // 不打包 node_modules 第三方包，而是保留 require 方式直接加载
     externals: [
