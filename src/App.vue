@@ -7,4 +7,8 @@
 <script>
 export default { name: 'App' }
 </script>
-<style> </style>
+<style>
+.st {
+    color: pink;
+}
+ </style>
